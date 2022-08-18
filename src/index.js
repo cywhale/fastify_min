@@ -3,12 +3,11 @@ import Fastify from 'fastify'
 import Static from '@fastify/static'
 //import fs, { readFileSync } from 'fs'
 import { join } from 'desm'
-import { pipeline } from 'stream'
 
 const startServer = async () => {
   const PORT = 3000;
   const fastify = Fastify({
-      trustProxy: true,
+      //trustProxy: true,
       requestTimeout: 5000,
       logger: true
   })
