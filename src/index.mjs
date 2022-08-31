@@ -5,7 +5,7 @@ import Static from '@fastify/static'
 import { join } from 'desm'
 
 const startServer = async () => {
-  const PORT = 3000;
+  const PORT = 3080;
   const fastify = Fastify({
       //trustProxy: true,
       requestTimeout: 5000,
