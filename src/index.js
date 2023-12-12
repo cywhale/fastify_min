@@ -1,11 +1,11 @@
 'use strict'
 import Fastify from 'fastify'
 import Static from '@fastify/static'
-//import fs, { readFileSync } from 'fs'
 import { join } from 'desm'
+import router from './router.mjs'
 
 const startServer = async () => {
-  const PORT = 3000;
+  const PORT = 3080
   const fastify = Fastify({
       //trustProxy: true,
       requestTimeout: 5000,
@@ -25,6 +25,8 @@ const startServer = async () => {
     fastify.log.info("test route")
     reply.send('Test ok!')
   })
+
+  fastify.register(router)
 
   fastify.listen({ port: PORT }, function (err, address) {
     if (err) {

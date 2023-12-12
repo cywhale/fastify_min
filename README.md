@@ -1,7 +1,7 @@
 # fastify_min
-minium node server trials by using fastify
+minium node server for testing issues by using fastify and pnpm
 
-  1. install: npm i
+  1. install: pnpm install
 
-  2. run: npm start
+  2. run: pnpm start
 
